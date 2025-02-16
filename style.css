@@ -116,7 +116,6 @@ footer {
 /* Discography page */
 .discography-albums-subtitle,
 .discography-films-subtitle {
-    margin-top: 80px;
     margin-bottom: 40px;
 }
 
@@ -124,6 +123,7 @@ footer {
 .discography-films {
     display: flex;
     flex-direction: column;
+    margin-bottom: 80px;
 }
 
 .discography-albums-grid,
@@ -132,7 +132,11 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 40px;
+}
+
+.discography-list {
+    list-style: none;
+    align-items: center;
 }
 
 .discography-content a {
@@ -162,12 +166,6 @@ footer {
 .discography-image-2x3 {
     width: 360px;
     height: 480px;
-}
-
-.discography-albums-list,
-.discography-films-list {
-    list-style: none;
-    align-items: center;
 }
 
 /* recording pages */
@@ -201,8 +199,10 @@ footer {
 }
 
 .recording-image {
+    min-width: 360px;
     width: 40%;
     height: auto;
+    max-height: 560px;
     object-fit: contain;
     margin: 0;
 }
@@ -215,11 +215,16 @@ footer {
 
 .recording-artist {
     color: #b43807;
+    text-align: left;
+}
+
+.recording-award {
+    margin-top: 40px;
 }
 
 .recording-quote {
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .recording-watch {
@@ -227,12 +232,20 @@ footer {
     color: #b43807;
 }
 
-.recording-watch:hover {
-    color: #800000;
+.recording-watch-2 {
+    color: #b43807;
 }
 
-.recording-watch a:visited {
+.recording-watch a:visited,
+.recording-watch a:link,
+.recording-watch-2 a:visited,
+.recording-watch-2 a:link {
     color: inherit;
+}
+
+.recording-watch a:hover,
+.recording-watch-2 a:hover {
+    color: #800000;
 }
 
 
@@ -273,7 +286,7 @@ footer {
 
 /* Teaching page */
 .teaching-content {
-    margin-top: 100px;
+    /*margin-top: 100px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
