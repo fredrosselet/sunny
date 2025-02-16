@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-/* Body */
+/* body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Adelaide;
     height: 100vh;
     line-height: 1.6;
     margin: 0;
@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 }
 
-/* Navigation */
+/* navigation */
 header {
     position: sticky;
     top: 0;
@@ -43,7 +43,11 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Main Content - common */
+a {
+    text-decoration: none;
+}
+
+/* main content - common */
 main {
     display: flex;
     flex-direction: column;
@@ -74,7 +78,15 @@ main ul {
     width: 100%;
 }
 
-/* Footer */
+iframe {
+    width: 400px;
+    max-width: 100%;
+    height: 240px;
+    max-height: 100%;
+    border: none;
+}
+
+/* footer */
 footer {
     position: fixed;
     bottom: 0;
@@ -85,33 +97,158 @@ footer {
     padding: 1rem;
 }
 
-/* about page */
-.about-text {
+/* Home page */
+.home-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-image {
+    width: 600px;
+}
+
+/* About page */
+.about-content {
+    margin-top: 100px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-bio {
     text-align: justify;
+    margin-bottom: 40px;
 }
 
-.about-image {
-    float: right;
+.about-awards-list {
+    margin-bottom: 40px;
 }
 
-@media (max-width: 768px) {
-    .about-image {
-        float: none;
-        display: block;
-        margin: 1rem auto;
-        text-align: center;
-    }
+.about-awards-subtitle,
+.about-award,
+.about-press-subtitle,
+.about-article {
+    padding: 1rem;
 }
+
+/*@media (max-width: 768px) {*/
+/*    .about-image {*/
+/*        float: none;*/
+/*        display: block;*/
+/*        margin: 1rem auto;*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
+
+/* discography page */
+.discography-albums-subtitle,
+.discography-films-subtitle {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.discography-albums,
+.discography-films {
+    display: flex;
+    flex-direction: column;
+}
+
+.discography-albums-grid,
+.discography-films-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.discography-image {
+    width: 360px;
+    height: 360px;
+}
+
+.discography-image-3x2 {
+    width: 360px;
+    height: 240px;
+}
+
+.discography-image-2x3 {
+    width: 360px;
+    height: 480px;
+}
+
+.discography-albums-list,
+.discography-films-list {
+    list-style: none;
+    align-items: center;
+}
+
+/* recording pages */
+.recording-back-button {
+    color: black;
+    margin-bottom: 60px;
+}
+
+.recording-back-button:hover {
+    color: #b43807;
+}
+
+.recording {
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recording h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.recording-image-and-description {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.recording-image {
+    width: 40%;
+    margin: 0;
+}
+
+.recording-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.recording-artist {
+    color: #b43807;
+}
+
+.recording-quote {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.recording-video {
+    margin: 1rem;
+}
+
+/*.recording-video iframe {*/
+/*    width: 800px;*/
+/*    max-width: 100%;*/
+/*    height: 480px;*/
+/*    max-height: 100%;*/
+/*    border: none;*/
+/*}*/
+
 
 /* media page */
-iframe {
-    width: 400px;
-    max-width: 100%;
-    height: 240px;
-    max-height: 100%;
-    border: none;
-}
-
 .media-grid {
     display: flex;
     flex-wrap: wrap;
