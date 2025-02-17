@@ -47,14 +47,39 @@ a {
     text-decoration: none;
 }
 
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
 /* main content - common */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 2rem 10rem;
+    padding: 4rem 1rem;
     overflow-y: auto;
-    height: 100%;
+    height: 90%;
+    font-size: 18px;
+    min-width: 300px;
+}
+
+@media (max-width: 1200px) {
+    main {
+        padding: 4rem 1rem 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 4rem 1rem 8rem;
+    }
 }
 
 h1 {
@@ -86,17 +111,6 @@ iframe {
     height: 240px;
     max-height: 100%;
     border: none;
-}
-
-/* footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
 }
 
 /* Home page */
@@ -155,7 +169,7 @@ footer {
 
 .discography-image {
     width: 360px;
-    height: 360px;
+    height: auto;
 }
 
 .discography-image-3x2 {
@@ -166,6 +180,15 @@ footer {
 .discography-image-2x3 {
     width: 360px;
     height: 480px;
+}
+
+@media (max-width: 768px) {
+    .discography-image,
+    .discography-image-3x2,
+    .discography-image-2x3 {
+        width: 240px;
+        height: auto;
+    }
 }
 
 /* recording pages */
@@ -182,9 +205,15 @@ footer {
 }
 
 .recording-content {
-    padding: 100px 100px 0;
+    padding: 0 8rem;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .recording-content {
+        padding: 0;
+    }
 }
 
 .recording h1 {
@@ -199,10 +228,17 @@ footer {
 }
 
 .recording-image {
-    min-width: 360px;
-    width: 40%;
+    min-width: 520px;
+    width: 520px;
     height: auto;
-    max-height: 560px;
+    object-fit: contain;
+    margin: 0;
+}
+
+.recording-image-2x3 {
+    min-width: 360px;
+    width: 360px;
+    height: auto;
     object-fit: contain;
     margin: 0;
 }
@@ -214,8 +250,11 @@ footer {
 }
 
 .recording-artist {
-    color: #b43807;
     text-align: left;
+}
+
+.recording-label {
+    margin-top: 10px;
 }
 
 .recording-award {
@@ -224,7 +263,6 @@ footer {
 
 .recording-quote {
     margin-top: 20px;
-    font-size: 18px;
 }
 
 .recording-watch {
@@ -248,6 +286,35 @@ footer {
     color: #800000;
 }
 
+@media (max-width: 768px) {
+    .recording-content {
+        text-align: center;
+    }
+
+    .recording-image-and-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recording-image,
+    .recording-image-2x3 {
+        width: 240px;
+        min-width: 240px;
+        height: auto;
+    }
+
+    .recording-description {
+        align-items: center;
+    }
+
+    .recording-quote {
+        text-align: left;
+    }
+
+    .recording-watch {
+        margin-top: 20px;
+    }
+}
 
 /* Media page */
 .media-content a {
@@ -259,7 +326,8 @@ footer {
 }
 
 .media-audio-subtitle,
-.media-video-subtitle {
+.media-video-subtitle,
+.media-photos-subtitle {
     margin-bottom: 10px;
 }
 
@@ -274,19 +342,42 @@ footer {
     padding: 10px;
 }
 
-.media-video-grid {
+.media-video-grid,
+.media-photos-grid {
     max-width: 1500px;
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-    padding-bottom: 1rem;
+    margin-bottom: 40px;
+}
+
+.media-photo,
+.media-photo-3x2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.media-photo img,
+.media-photo-3x2 img {
+    margin: 1rem 1rem 0
+}
+
+.media-photo span,
+.media-photo-3x2 span {
+    font-size: 14px;
+}
+
+.media-photo-3x2 {
+    width: 360px;
+    height: 240px;
 }
 
 /* Teaching page */
 .teaching-content {
-    /*margin-top: 100px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -299,7 +390,7 @@ footer {
 
 .teaching-image {
     width: 520px;
-    height: 346px;
+    height: auto;
 }
 
 .teaching-section {
@@ -320,51 +411,61 @@ footer {
     gap: 20px;
 }
 
+@media (max-width: 768px) {
+    .teaching-lists {
+        flex-direction: column;
+    }
+}
+
 .teaching-subtitle {
     margin-bottom: 20px;
 }
 
-.teaching-50ftf-link {
+.teaching-50ftf-link,
+.teaching-link {
     color: #b43807;
 }
 
-.teaching-50ftf-link:hover {
+.teaching-50ftf-link:hover,
+.teaching-link:hover {
     color: #800000;
 }
 
-/* About page */
-/*.about-content {*/
-/*    margin-top: 40px;*/
-/*    max-width: 1000px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-.about-content {
-    height: 100%;
-    max-width: 1000px;
+.teaching-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* About page */
+.about-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .about-image-and-bio {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.about-bio {
-    text-align: justify;
-    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-bottom: 30px;
 }
 
 .about-image {
-    width: 457px;
-    height: 603px;
+    float: right;
+    margin: 0 0 10px 15px;
+    width: 460px;
+    height: auto;
+}
+
+@media (max-width: 1200px) {
+    .about-content {
+        height: auto;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
 }
 
 .about-links {
@@ -380,18 +481,8 @@ footer {
     color: #800000;
 }
 
-/*@media (max-width: 768px) {*/
-/*    .about-image {*/
-/*        float: none;*/
-/*        display: block;*/
-/*        margin: 1rem auto;*/
-/*        text-align: center;*/
-/*    }*/
-/*}*/
-
 /* Awards page */
 .awards-main {
-    padding: 20px 100px 120px 100px;
     display: flex;
     flex-direction: column;
 }
@@ -399,16 +490,24 @@ footer {
 .awards-back-button {
     position: absolute;
     left: 100px;
-    /*margin-right: auto;*/
     display: flex;
     align-items: center;
     gap: 4px;
     color: #b43807;
     margin-bottom: 60px;
+    background-color: #fff;
 }
 
 .awards-back-button:hover {
     color: #800000;
+}
+
+@media (max-width: 768px) {
+    .awards-back-button {
+        position: relative;
+        left: 0;
+        margin-bottom: 20px;
+    }
 }
 
 .awards-content {
@@ -426,7 +525,6 @@ footer {
 
 /* Press page */
 .press-main {
-    padding: 20px 100px 120px 100px;
     display: flex;
     flex-direction: column;
 }
@@ -434,12 +532,20 @@ footer {
 .press-back-button {
     position: absolute;
     left: 100px;
-    /*margin-right: auto;*/
     display: flex;
     align-items: center;
     gap: 4px;
     color: #b43807;
     margin-bottom: 60px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .press-back-button {
+        position: relative;
+        left: 0;
+        margin-bottom: 20px;
+    }
 }
 
 .press-back-button:hover {
@@ -457,5 +563,32 @@ footer {
 .press-subtitle,
 .article {
     padding: 1rem;
+}
+
+/* Contact page */
+.contact-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-content input,
+.contact-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    resize: none;
+}
+
+.contact-content button {
+    background: #b43807;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-content button:hover {
+    background: #800000;;
 }
 
