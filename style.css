@@ -6,7 +6,7 @@
 
 /* body */
 body {
-    padding: 4rem 1rem;
+    /* padding: 4rem 1rem; */
     font-family: Baskerville;
     height: 100vh;
     line-height: 1.6;
@@ -30,6 +30,7 @@ header {
 
 header p {
     font-size: 32px;
+    white-space: nowrap;
 }
 
 nav ul {
@@ -53,6 +54,7 @@ nav ul li a:hover {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* footer */
@@ -71,24 +73,24 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding: 4rem 1rem;*/
+    padding: 4rem 1rem;
     overflow-y: auto;
     height: 90%;
     font-size: 18px;
     min-width: 300px;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     main {
         padding: 4rem 1rem 8rem;
     }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     main {
         padding: 4rem 1rem 8rem;
     }
-}
+} */
 
 h1 {
     margin-bottom: 1rem;
@@ -132,7 +134,7 @@ iframe {
 }
 
 .home-image {
-    width: 1200px;
+    width: 900px;
 }
 
 /* Discography page */
@@ -176,7 +178,7 @@ iframe {
 }
 
 .discography-content li {
-    padding: 10px
+    padding: 10px;
 }
 
 .discography-image {
@@ -375,7 +377,7 @@ iframe {
 
 .media-photo img,
 .media-photo-3x2 img {
-    margin: 1rem 1rem 0
+    margin: 1rem 1rem 0 /* remove ? */
 }
 
 .media-photo span,
