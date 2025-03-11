@@ -3,33 +3,41 @@
     <url>
         <loc>https://sunnyyangcello.com/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/media/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/discography/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/teaching/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/about/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/awards/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/press/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://sunnyyangcello.com/contact/</loc>
         <lastmod>2025-03-01</lastmod>
+        <priority>0.5</priority>
     </url>
 </urlset>
